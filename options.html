@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Organizer — Options</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="options-body">
+  <div class="options-container">
+    <header class="options-header">
+      <img src="icons/icon48.png" alt="Download Organizer" class="header-logo" />
+      <div>
+        <h1 class="header-title">Download Organizer</h1>
+        <p class="header-sub">Settings &amp; Category Management</p>
+      </div>
+    </header>
+
+    <!-- ── Categories ── -->
+    <section class="options-card">
+      <h2 class="card-title">📁 Categories</h2>
+      <p class="card-desc">
+        These folders will appear as options when a download starts. Files are saved to
+        <code>&lt;Downloads&gt;/&lt;category&gt;/&lt;filename&gt;</code>.
+      </p>
+
+      <div id="categoriesTable" class="categories-table"></div>
+
+      <div class="input-row mt-md">
+        <input
+          type="text"
+          id="newCategoryInput"
+          class="text-input"
+          placeholder="New category name…"
+          maxlength="60"
+          autocomplete="off"
+        />
+        <button id="addCategoryBtn" class="btn btn-primary">Add Category</button>
+      </div>
+      <p class="hint-text" id="addHint"></p>
+    </section>
+
+    <!-- ── Settings ── -->
+    <section class="options-card">
+      <h2 class="card-title">⚙ Settings</h2>
+
+      <div class="setting-row">
+        <div class="setting-info">
+          <span class="setting-name">Always ask on download</span>
+          <span class="setting-desc">Show the category dialog for every download. If disabled, downloads go to your default location.</span>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="alwaysAsk" checked />
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+
+      <div class="setting-row">
+        <div class="setting-info">
+          <span class="setting-name">Default category</span>
+          <span class="setting-desc">Pre-select this category in the dialog (user can still change it).</span>
+        </div>
+        <select id="defaultCategory" class="select-input">
+          <option value="">— None —</option>
+        </select>
+      </div>
+    </section>
+
+    <div class="options-actions">
+      <button id="saveSettingsBtn" class="btn btn-primary">Save Settings</button>
+      <span id="saveStatus" class="save-status"></span>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
