@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Organizer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="popup-body">
+  <div class="popup-container">
+    <header class="popup-header">
+      <img src="icons/icon48.png" alt="Download Organizer" class="header-logo" />
+      <div>
+        <h1 class="header-title">Download Organizer</h1>
+        <p class="header-sub">Manage your download categories</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section-heading">
+        <span class="section-label">Categories</span>
+        <span class="category-count" id="categoryCount"></span>
+      </div>
+      <div id="categoryList" class="category-manage-list"></div>
+    </section>
+
+    <section class="section">
+      <label class="section-label" for="newCategoryInput">New category</label>
+      <div class="input-row">
+        <input
+          type="text"
+          id="newCategoryInput"
+          class="text-input"
+          placeholder="Category name…"
+          maxlength="60"
+          autocomplete="off"
+        />
+        <button id="addBtn" class="btn btn-primary">Add</button>
+      </div>
+      <p class="hint-text" id="addHint"></p>
+    </section>
+
+    <footer class="popup-footer">
+      <button id="optionsBtn" class="btn btn-ghost btn-sm">⚙ Options</button>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
